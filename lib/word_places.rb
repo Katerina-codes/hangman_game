@@ -5,7 +5,7 @@ class WordPlaces
     word = word.split("")
 
     word.each do |character|
-      x.push("_")
+      x.push("_ ")
     end
     x
   end
