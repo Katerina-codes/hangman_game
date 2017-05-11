@@ -32,4 +32,8 @@ describe WordPlaces do
     expect(subject.substitute_letters("t", "_ ")).to eq("t ")
   end
 
+  it "substitutes a line with a letter" do
+    expect(subject.substitute_letters("a", ["_", "_"])).to eq(["a", "a"])
+  end
+
 end
