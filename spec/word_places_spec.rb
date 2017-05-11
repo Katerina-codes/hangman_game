@@ -32,6 +32,10 @@ describe WordPlaces do
     expect(subject.substitute_letters("t", "_ ")).to eq("t ")
   end
 
+  it "substitutes a line with 'e'" do
+    expect(subject.substitute_letters("e", "_ ")).to eq("e ")
+  end
+
   it "substitutes 2 lines with the same 2 characters" do
     expect(subject.substitute_letters("a", ["_", "_"])).to eq(["a", "a"])
   end

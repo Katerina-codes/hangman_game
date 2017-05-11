@@ -15,6 +15,8 @@ class WordPlaces
       "a "
     elsif guess == "t"
       "t "
+    elsif guess == "e"
+      "e "
     else
       ["a", "a"]
     end
