@@ -5,6 +5,8 @@ class WordPlaces
       "_"
     elsif word == "aa"
       ["_", "_"]
+    elsif word == "ab"
+      ["_", "_"]
     else
       ["_", "_", "_"]
     end
