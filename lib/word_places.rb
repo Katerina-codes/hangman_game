@@ -10,4 +10,8 @@ class WordPlaces
     x
   end
 
+  def substitute_letters(guess, word_spaces)
+    "a "
+  end
+
 end
