@@ -1,7 +1,11 @@
 class Guesses
 
   def check_guess(guess)
-    true
+    if guess == "a"
+      true
+    else
+      false
+    end
   end
 
 end
