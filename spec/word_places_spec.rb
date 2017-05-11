@@ -5,7 +5,7 @@ describe WordPlaces do
   subject(:word_places) { described_class.new }
 
   it "returns one line for one character" do
-    expect(subject.spaces("a")).to eq("_")
+    expect(subject.spaces("a")).to eq(["_"])
   end
 
   it "returns two lines for two characters" do

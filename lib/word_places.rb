@@ -1,15 +1,13 @@
 class WordPlaces
 
   def spaces(word)
-    if word == "a"
-      "_"
-    elsif word == "aa"
-      ["_", "_"]
-    elsif word == "ab"
-      ["_", "_"]
-    else
-      ["_", "_", "_"]
+    x = []
+    word = word.split("")
+
+    word.each do |character|
+      x.push("_")
     end
+    x
   end
 
 end
