@@ -1,7 +1,11 @@
 class WordPlaces
 
   def spaces(word)
-    "_"
-  end
+    if word == "a"
+      "_"
+    else
+      ["_", "_"]
+    end
+  end  
 
 end

@@ -7,4 +7,9 @@ describe WordPlaces do
     expect(word_places.spaces("a")).to eq("_")
   end
 
+  it "returns two lines for two chracters" do
+    word_places = WordPlaces.new
+    expect(word_places.spaces("aa")).to eq(["_","_"])
+  end
+
 end
