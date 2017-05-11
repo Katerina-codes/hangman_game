@@ -1,11 +1,11 @@
 class Guesses
 
   def check_guess(guess, word)
-    if guess == "a"
+    if word.include?(guess)
       true
     else
       false
     end
   end
-
+  
 end
