@@ -23,4 +23,13 @@ describe WordPlaces do
   it "substitutes a line with a letter if guess is correct" do
     expect(subject.substitute_letters("a", "_ ")).to eq("a ")
   end
+
+  it "substitutes a line with a letter if guess is correct" do
+    expect(subject.substitute_letters("a", "_ ")).to eq("a ")
+  end
+
+  it "substitutes a line with a letter if guess is correct" do
+    expect(subject.substitute_letters("t", "_ ")).to eq("t ")
+  end
+
 end

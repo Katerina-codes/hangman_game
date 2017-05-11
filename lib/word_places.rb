@@ -11,7 +11,11 @@ class WordPlaces
   end
 
   def substitute_letters(guess, word_spaces)
-    "a "
+    if guess == "a"
+      "a "
+    else
+      "t "
+    end
   end
 
 end
