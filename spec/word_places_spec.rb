@@ -20,7 +20,7 @@ describe WordPlaces do
     expect(subject.spaces("aaa")).to eq(["_ ", "_ ", "_ "])
   end
 
-  it "substitutes a line if letter guess is correct" do
+  it "substitutes a line with a letter if guess is correct" do
     expect(subject.substitute_letters("a", "_ ")).to eq("a ")
   end
 end
