@@ -21,23 +21,23 @@ describe WordPlaces do
   end
 
   it "substitutes a line with a letter if guess is correct" do
-    expect(subject.substitute_letters("a", "_ ")).to eq("a ")
+    expect(subject.substitute_letters("a", "_ ", "a")).to eq("a ")
   end
 
-  it "substitutes a line with 'a'" do
-    expect(subject.substitute_letters("a", "_ ")).to eq("a ")
-  end
+  # it "substitutes a line with 'a'" do
+  #   expect(subject.substitute_letters("a", "_ ")).to eq("a ")
+  # end
 
   it "substitutes a line with 't'" do
-    expect(subject.substitute_letters("t", "_ ")).to eq("t ")
+    expect(subject.substitute_letters("t", "_ ", "t")).to eq("t ")
   end
 
   it "substitutes a line with 'e'" do
-    expect(subject.substitute_letters("e", "_ ")).to eq("e ")
+    expect(subject.substitute_letters("e", "_ ", "e")).to eq("e ")
   end
 
   it "substitutes 2 lines with the same 2 characters" do
-    expect(subject.substitute_letters("a", ["_", "_"])).to eq(["a", "a"])
+    expect(subject.substitute_letters("a", ["_", "_"], "aa")).to eq(["a", "a"])
   end
 
 end

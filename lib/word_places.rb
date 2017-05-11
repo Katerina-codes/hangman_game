@@ -10,16 +10,13 @@ class WordPlaces
     x
   end
 
-  def substitute_letters(guess, word_spaces)
-    if guess == "a" && word_spaces == "_ "
-      "a "
-    elsif guess == "t"
-      "t "
-    elsif guess == "e"
-      "e "
-    else
-      ["a", "a"]
+  def substitute_letters(guess, word_spaces, word)
+    word.split("")
+    letter_position = (0..word.length-1).select {|i| word[i] == guess}
+    letter_position.each do |index|
+    word_spaces[index] = guess
     end
+    word_spaces
   end
 
 end
