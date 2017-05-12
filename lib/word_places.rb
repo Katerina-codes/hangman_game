@@ -11,7 +11,6 @@ class WordPlaces
   end
 
   def substitute_letters(guess, word_spaces, word)
-    word.split("")
     letter_position = (0..word.length-1).select {|i| word[i] == guess}
     letter_position.each do |index|
     word_spaces[index] = guess
