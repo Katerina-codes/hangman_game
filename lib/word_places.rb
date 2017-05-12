@@ -10,12 +10,12 @@ class WordPlaces
     x
   end
 
-  def substitute_letters(guess, word_spaces, word)
+  def substitute_letters(guess, word_places, word)
     letter_position = (0..word.length-1).select {|i| word[i] == guess}
     letter_position.each do |index|
-    word_spaces[index] = guess
+    word_places[index] = guess
     end
-    word_spaces
+    word_places
   end
 
 end
