@@ -16,4 +16,10 @@ describe Display do
     expect(output.string).to eq("Please enter a letter\n")
   end
 
+  it "gets letter input from a user" do
+    input = StringIO.new("a")
+    display = Display.new(output, input)
+    expect(display.get_letter_input).to eq("a")
+  end
+
 end
