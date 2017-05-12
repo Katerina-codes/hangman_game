@@ -47,4 +47,5 @@ describe WordPlaces do
   it "substitutes all relevant lines with a letter" do
     expect(subject.substitute_letters("e", ["_", "_", "_", "_", "_", "_", "_", "_", "_"], "eagerness")).to eq(["e", "_", "_", "e", "_", "_", "e", "_", "_"])
   end
+
 end
