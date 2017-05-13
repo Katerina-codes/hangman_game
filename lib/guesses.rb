@@ -9,6 +9,10 @@ class Guesses
   end
 
   def increment_guess(number_of_guesses)
-    1
+    if number_of_guesses == 0
+      1
+    else
+      2
+    end
   end
 end

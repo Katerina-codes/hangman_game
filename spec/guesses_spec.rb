@@ -20,8 +20,12 @@ describe Guesses do
     expect(subject.guess_number(1)).to eq(1)
   end
 
-  it "it adds 1 to each guess" do
+  it "Returns 1 if guess number is 0" do
     expect(subject.increment_guess(0)).to eq(1)
+  end
+
+  it "Returns 2 if guess number is 1" do
+    expect(subject.increment_guess(1)).to eq(2)
   end
 
 end
