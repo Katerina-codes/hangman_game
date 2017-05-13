@@ -18,13 +18,12 @@ class Display
   end
 
   def draw_body_part(guess_number)
-    if guess_number == 1
-      "0"
-    elsif guess_number == 2
-      "|"
-    elsif guess_number == 3
-      "-"
-    end
+    body_parts = {
+      1 => "0",
+      2 => "|",
+      3 => "-"
+    }
+    body_parts[guess_number]
   end
 
 end
