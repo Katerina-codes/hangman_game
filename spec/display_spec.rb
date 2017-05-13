@@ -24,7 +24,7 @@ describe Display do
 
   it "Draws first body part" do
     display = Display.new
-    expect(display.draw_body_part).to eq("0 ")
+    expect(display.draw_body_part(1)).to eq("0")
   end
 
 end

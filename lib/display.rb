@@ -17,7 +17,7 @@ class Display
     @input.gets.chomp
   end
 
-  def draw_body_part
+  def draw_body_part(guess_number)
     "0"
   end
 
