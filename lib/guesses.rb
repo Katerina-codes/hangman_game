@@ -4,12 +4,8 @@ class Guesses
     word.include?(guess)
   end
 
-  def wrong_guess_counter(guess)
-    if guess == 0
-      0
-    else
-      1
-    end
+  def wrong_guess_counter(number_of_guesses)
+    number_of_guesses
   end
 
 end
