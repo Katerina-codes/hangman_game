@@ -3,6 +3,7 @@ class Display
     1 => "0",
     2 => "|",
     3 => "-"
+    4 => "-"
   }
 
   def initialize(output = $stdout, input = $stdin)

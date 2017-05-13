@@ -33,7 +33,12 @@ describe Display do
 
   it "Draws the third body part" do
     display = Display.new
-    expect(display.draw_body_part(3)).to eq("-") 
+    expect(display.draw_body_part(3)).to eq("-")
+  end
+
+  it "Draws the fourth body part" do
+    display = Display.new
+    expect(display.draw_body_part(4)).to eq("-")
   end
 
 end
