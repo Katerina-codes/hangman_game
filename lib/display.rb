@@ -18,7 +18,11 @@ class Display
   end
 
   def draw_body_part(guess_number)
-    "0"
+    if guess_number == 1
+      "0"
+    else
+      "|"
+    end
   end
 
 end

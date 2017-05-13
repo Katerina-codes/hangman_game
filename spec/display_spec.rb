@@ -27,4 +27,9 @@ describe Display do
     expect(display.draw_body_part(1)).to eq("0")
   end
 
+  it "Draws second body part" do
+    display = Display.new
+    expect(display.draw_body_part(2)).to eq("|")
+  end
+
 end
