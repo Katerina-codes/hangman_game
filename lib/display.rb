@@ -22,7 +22,7 @@ class Display
       "0"
     elsif guess_number == 2
       "|"
-    else
+    elsif guess_number == 3
       "-"
     end
   end
