@@ -12,4 +12,8 @@ describe Guesses do
     expect(subject.check_guess("b", "nutella")).to eq(false)
   end
 
+  it "starts at 0" do
+    expect(subject.guess_counter).to eq("0")
+  end
+
 end

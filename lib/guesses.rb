@@ -4,4 +4,8 @@ class Guesses
     word.include?(guess)
   end
 
+  def guess_counter
+    "0"
+  end
+
 end
