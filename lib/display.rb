@@ -4,7 +4,8 @@ class Display
     2 => "|",
     3 => "-",
     4 => "-",
-    5 => "\\"
+    5 => "\\",
+    6 => "/"
   }
 
   def initialize(output = $stdout, input = $stdin)
