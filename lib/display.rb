@@ -17,4 +17,8 @@ class Display
     @input.gets.chomp
   end
 
+  def draw_body_part
+    "0"
+  end
+
 end

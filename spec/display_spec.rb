@@ -22,4 +22,9 @@ describe Display do
     expect(display.get_letter_input).to eq("a")
   end
 
+  it "displays a body part" do
+    display = Display.new
+    expect(display.draw_body_part).to eq("0")
+  end
+
 end
