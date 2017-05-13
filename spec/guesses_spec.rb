@@ -13,7 +13,11 @@ describe Guesses do
   end
 
   it "starts at 0" do
-    expect(subject.guess_counter).to eq("0")
+    expect(subject.wrong_guess_counter(0)).to eq(0)
+  end
+
+  it "Adds 1 guess to the counter" do
+    expect(subject.wrong_guess_counter(1)).to eq(1)
   end
 
 end
