@@ -2,7 +2,7 @@ require 'guesses'
 
 describe Guesses do
 
-  subject(:guesses) { described_class.new }
+  subject { described_class.new }
 
   it "returns true if guessed letter is in word" do
     expect(subject.check_guess("a", "nutella")).to eq(true)
