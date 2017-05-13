@@ -6,7 +6,7 @@ class Display
   end
 
   def display_lines(word_places)
-    @output.puts "Word = " + word_places
+    @output.puts "Word = " + word_places.to_s
   end
 
   def ask_for_letter
