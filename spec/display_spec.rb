@@ -41,4 +41,9 @@ describe Display do
     expect(display.draw_body_part(4)).to eq("-")
   end
 
+  it "Draws the fifth body part" do
+    display = Display.new
+    expect(display.draw_body_part(5)).to eq("\\")
+  end
+
 end

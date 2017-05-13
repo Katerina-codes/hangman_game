@@ -2,8 +2,9 @@ class Display
   BODY_PARTS = {
     1 => "0",
     2 => "|",
-    3 => "-"
-    4 => "-"
+    3 => "-",
+    4 => "-",
+    5 => "\\"
   }
 
   def initialize(output = $stdout, input = $stdin)
