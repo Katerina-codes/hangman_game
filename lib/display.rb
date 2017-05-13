@@ -20,8 +20,10 @@ class Display
   def draw_body_part(guess_number)
     if guess_number == 1
       "0"
-    else
+    elsif guess_number == 2
       "|"
+    else
+      "-"
     end
   end
 

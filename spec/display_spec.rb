@@ -10,7 +10,6 @@ describe Display do
   end
 
   it "asks for user to enter a letter" do
-    # output = StringIO.new
     display = Display.new(output)
     display.ask_for_letter
     expect(output.string).to eq("Please enter a letter\n")
@@ -30,6 +29,11 @@ describe Display do
   it "Draws second body part" do
     display = Display.new
     expect(display.draw_body_part(2)).to eq("|")
+  end
+
+  it "Draws the third body part" do
+    display = Display.new
+    expect(display.draw_body_part(3)).to eq("-") 
   end
 
 end
