@@ -1,4 +1,9 @@
 class Display
+  BODY_PARTS = {
+    1 => "0",
+    2 => "|",
+    3 => "-"
+  }
 
   def initialize(output = $stdout, input = $stdin)
     @output = output
@@ -18,12 +23,7 @@ class Display
   end
 
   def draw_body_part(guess_number)
-    body_parts = {
-      1 => "0",
-      2 => "|",
-      3 => "-"
-    }
-    body_parts[guess_number]
+    BODY_PARTS[guess_number]
   end
 
 end
