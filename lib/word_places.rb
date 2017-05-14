@@ -1,13 +1,13 @@
 class WordPlaces
 
   def spaces(word)
-    x = []
+    word_places = []
     word = word.split("")
 
     word.each do |character|
-      x.push("_ ")
+      word_places.push("_ ")
     end
-    x
+    word_places
   end
 
   def substitute_letters(guess, word_places, word)
