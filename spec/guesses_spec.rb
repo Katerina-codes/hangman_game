@@ -28,4 +28,8 @@ describe Guesses do
     expect(subject.increment_guess(1)).to eq(2)
   end
 
+  it "Returns 3 if guess number is 2" do
+    expect(subject.increment_guess(2)).to eq(3)
+  end
+
 end
