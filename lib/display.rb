@@ -30,7 +30,7 @@ class Display
   end
 
   def display_body_part(body_part)
-    @output.puts "0"
+    @output.puts body_part
   end
 
 end
