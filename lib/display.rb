@@ -29,4 +29,8 @@ class Display
     BODY_PARTS[guess_number]
   end
 
+  def display_body_part(body_part)
+    @output.puts "0"
+  end
+
 end

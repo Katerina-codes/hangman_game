@@ -51,4 +51,10 @@ describe Display do
     expect(display.draw_body_part(6)).to eq("/")
   end
 
+  it "displays a body part to user" do
+    display = Display.new(output)
+    display.display_body_part("0")
+    expect(output.string).to eq("0\n")
+  end
+
 end
