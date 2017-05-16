@@ -32,11 +32,11 @@ describe WordPlaces do
     expect(subject.substitute_letters("a", "__", "aa")).to eq("aa")
   end
 
-  it "substitutes the 2nd line with two different letters" do
+  it "substitutes the 2nd line with a letter" do
     expect(subject.substitute_letters("a", "__", "ba")).to eq("_a")
   end
 
-  it "substitutes the first and second line with a letter" do
+  it "substitutes the first and third line with a letter" do
     expect(subject.substitute_letters("t", "___", "tat")).to eq("t_t")
   end
 
