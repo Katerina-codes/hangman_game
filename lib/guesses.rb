@@ -1,6 +1,6 @@
 class Guesses
 
-  def check_guess(guess, word)
+  def letter_is_present?(guess, word)
     word.include?(guess)
   end
 
