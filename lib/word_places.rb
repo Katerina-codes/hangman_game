@@ -5,9 +5,9 @@ class WordPlaces
     word = word.split("")
 
     word.each do |character|
-      word_places.push("_ ")
+      word_places.push("_")
     end
-    word_places
+    word_places.join
   end
 
   def substitute_letters(guess, word_places, word)

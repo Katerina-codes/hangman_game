@@ -5,19 +5,19 @@ describe WordPlaces do
   subject(:word_places) { described_class.new }
 
   it "returns one line for one character" do
-    expect(subject.spaces("a")).to eq(["_ "])
+    expect(subject.spaces("a")).to eq("_")
   end
 
   it "returns two lines for two characters" do
-    expect(subject.spaces("aa")).to eq(["_ ", "_ "])
+    expect(subject.spaces("aa")).to eq("__")
   end
 
   it "returns two lines for two different characters" do
-    expect(subject.spaces("ab")).to eq(["_ ", "_ "])
+    expect(subject.spaces("ab")).to eq("__")
   end
 
   it "returns three lines for three characters" do
-    expect(subject.spaces("aaa")).to eq(["_ ", "_ ", "_ "])
+    expect(subject.spaces("aaa")).to eq("___")
   end
 
   it "substitutes a line with a letter if guess is correct" do
