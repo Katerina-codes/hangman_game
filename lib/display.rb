@@ -22,11 +22,18 @@ class Display
   end
 
   def get_letter_input
-    @input.gets.chomp.downcase
+    @input.gets.chomp.downcase.to_s
   end
 
   def check_input_is_valid(guess)
-    "Please enter a letter\n"
+    alphabet = ("a".."z").to_a
+    alphabet = alphabet.join
+    if alphabet.include?(guess)
+      guess
+    else
+      !alphabet.include?(guess)
+      "Please enter a letter\n"
+    end
   end
 
   def draw_body_part(guess_number)

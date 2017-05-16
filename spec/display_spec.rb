@@ -23,7 +23,7 @@ describe Display do
 
   it "prompts again for a letter if input is a number" do
     display = Display.new
-    expect(display.check_input_is_valid(0)).to eq("Please enter a letter\n")
+    expect(display.check_input_is_valid("0")).to eq("Please enter a letter\n")
   end
 
   it "prompts again for a letter if input is a punctuaton mark" do
