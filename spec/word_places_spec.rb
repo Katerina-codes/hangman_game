@@ -12,10 +12,6 @@ describe WordPlaces do
     expect(subject.spaces("aa")).to eq("__")
   end
 
-  it "returns two lines for two different characters" do
-    expect(subject.spaces("ab")).to eq("__")
-  end
-
   it "returns three lines for three characters" do
     expect(subject.spaces("aaa")).to eq("___")
   end
