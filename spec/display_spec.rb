@@ -20,16 +20,21 @@ describe Display do
     display = Display.new(output, input)
     expect(display.get_letter_input).to eq("a")
   end
-
-  it "prompts again for a letter if input is a number" do
-    display = Display.new
-    expect(display.check_input_is_valid("0")).to eq("Please enter a letter\n")
-  end
-
-  it "prompts again for a letter if input is a punctuaton mark" do
-    display = Display.new
-    expect(display.check_input_is_valid("!")).to eq("Please enter a letter\n")
-  end
+  #
+  # it "prompts again for a letter if input is a number" do
+  #   display = Display.new
+  #   expect(display.check_input_is_valid("0")).to eq("Please enter a letter\n")
+  # end
+  #
+  # it "prompts again for a letter if input is a punctuaton mark" do
+  #   display = Display.new
+  #   expect(display.check_input_is_valid("!")).to eq("Please enter a letter\n")
+  # end
+  #
+  # it "returns 'win' if guess equals word" do
+  #   display = Display.new
+  #   expect(display.check_input_is_valid("nutella")).to eq("Win!")
+  # end
 
   it "Draws first body part" do
     display = Display.new
