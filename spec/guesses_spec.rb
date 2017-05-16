@@ -12,6 +12,18 @@ describe Guesses do
     expect(subject.check_guess("b", "nutella")).to eq(false)
   end
 
+  it "prompts again for a letter if input is a number" do
+    expect(subject.check_input_is_valid("0")).to eq("Please enter a letter\n")
+  end
+
+  it "prompts again for a letter if input is a punctuaton mark" do
+    expect(subject.check_input_is_valid("!")).to eq("Please enter a letter\n")
+  end
+
+  it "returns 'win' if guess equals word" do
+    expect(subject.check_if_word_is_guessed("nutella", "nutella")).to eq("Winner!")
+  end
+
   it "starts at 0" do
     expect(subject.guess_number(0)).to eq(0)
   end
