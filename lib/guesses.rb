@@ -16,12 +16,7 @@ class Guesses
   def check_input_is_valid(guess)
     alphabet = ("a".."z").to_a
     alphabet = alphabet.join
-    if alphabet.include?(guess)
-      guess
-    else
-      !alphabet.include?(guess)
-      "Please enter a letter\n"
-    end
+    alphabet.include?(guess)
   end
 
   def check_if_word_is_guessed?(guess, word)
