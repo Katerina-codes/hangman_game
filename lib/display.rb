@@ -22,7 +22,7 @@ class Display
   end
 
   def get_letter_input
-    @input.gets.chomp
+    @input.gets.chomp.downcase
   end
 
   def draw_body_part(guess_number)
