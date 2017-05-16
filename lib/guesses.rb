@@ -25,6 +25,6 @@ class Guesses
   end
 
   def check_if_word_is_guessed(guess, word)
-    "Winner!"
+    guess == word
   end
 end

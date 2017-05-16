@@ -20,8 +20,8 @@ describe Guesses do
     expect(subject.check_input_is_valid("!")).to eq("Please enter a letter\n")
   end
 
-  it "returns 'win' if guess equals word" do
-    expect(subject.check_if_word_is_guessed("nutella", "nutella")).to eq("Winner!")
+  it "returns true if guess equals word" do
+    expect(subject.check_if_word_is_guessed("nutella", "nutella")).to eq(true)
   end
 
   it "starts at 0" do
