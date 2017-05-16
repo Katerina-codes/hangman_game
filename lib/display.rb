@@ -48,7 +48,7 @@ class Display
   end
 
   def display_you_win
-    "You win! Woohoo!"
+    @output.puts "You win! Woohoo!"
   end
 
 end

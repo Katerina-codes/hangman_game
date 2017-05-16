@@ -59,7 +59,9 @@ describe Display do
   end
 
   it "Returns 'You win!' if guess = word" do
-    expect(subject.display_you_win).to eq("You win! Woohoo!")
+    display = Display.new(output)
+    display.display_you_win
+    expect(output.string).to eq("You win! Woohoo!\n")
   end
 
   # it "displays a body part to user" do
