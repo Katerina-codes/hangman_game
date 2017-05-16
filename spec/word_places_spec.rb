@@ -21,31 +21,31 @@ describe WordPlaces do
   end
 
   it "substitutes a line with a letter if guess is correct" do
-    expect(subject.substitute_letters("a", "_ ", "a")).to eq("a ")
+    expect(subject.substitute_letters("a", "_", "a")).to eq("a")
   end
 
   it "substitutes a line with 't'" do
-    expect(subject.substitute_letters("t", "_ ", "t")).to eq("t ")
+    expect(subject.substitute_letters("t", "_", "t")).to eq("t")
   end
 
   it "substitutes a line with 'e'" do
-    expect(subject.substitute_letters("e", "_ ", "e")).to eq("e ")
+    expect(subject.substitute_letters("e", "_", "e")).to eq("e")
   end
 
   it "substitutes 2 lines with the same 2 letter" do
-    expect(subject.substitute_letters("a", ["_", "_"], "aa")).to eq(["a", "a"])
+    expect(subject.substitute_letters("a", "__", "aa")).to eq("aa")
   end
 
   it "substitutes the 2nd line with a letter" do
-    expect(subject.substitute_letters("a", ["_", "_"], "ba")).to eq(["_", "a"])
+    expect(subject.substitute_letters("a", "__", "ba")).to eq("_a")
   end
 
   it "substitutes the first and second line with a letter" do
-    expect(subject.substitute_letters("t", ["_", "_", "_"], "tat")).to eq(["t", "_", "t"])
+    expect(subject.substitute_letters("t", "___", "tat")).to eq("t_t")
   end
 
   it "substitutes all relevant lines with a letter" do
-    expect(subject.substitute_letters("e", ["_", "_", "_", "_", "_", "_", "_", "_", "_"], "eagerness")).to eq(["e", "_", "_", "e", "_", "_", "e", "_", "_"])
+    expect(subject.substitute_letters("e", "_________", "eagerness")).to eq("e__e__e__")
   end
 
 end
