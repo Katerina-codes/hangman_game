@@ -30,7 +30,7 @@ class Display
 
     if guess == "nutella"
       guess
-    elsif guesses.check_input_is_valid(guess)
+    elsif guesses.check_input_is_valid?(guess)
       guess
     else
       ask_for_letter

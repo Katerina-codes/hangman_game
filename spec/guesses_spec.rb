@@ -13,11 +13,11 @@ describe Guesses do
   end
 
   it "prompts again for a letter if input is a number" do
-    expect(subject.check_input_is_valid("0")).to eq(false)
+    expect(subject.check_input_is_valid?("0")).to eq(false)
   end
 
   it "prompts again for a letter if input is a punctuaton mark" do
-    expect(subject.check_input_is_valid("!")).to eq(false)
+    expect(subject.check_input_is_valid?("!")).to eq(false)
   end
 
   it "returns true if guess equals word" do

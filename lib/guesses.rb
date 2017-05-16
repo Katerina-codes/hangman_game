@@ -8,7 +8,7 @@ class Guesses
     number_of_guesses += 1
   end
 
-  def check_input_is_valid(guess)
+  def check_input_is_valid?(guess)
     alphabet = ("a".."z").to_a
     alphabet = alphabet.join
     alphabet.include?(guess)
