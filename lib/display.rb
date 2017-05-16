@@ -47,4 +47,8 @@ class Display
     @output.print "#{b}"
   end
 
+  def display_you_win
+    "You win! Woohoo!"
+  end
+
 end
