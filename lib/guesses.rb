@@ -24,7 +24,7 @@ class Guesses
     end
   end
 
-  def check_if_word_is_guessed(guess, word)
+  def check_if_word_is_guessed?(guess, word)
     guess == word
   end
 end

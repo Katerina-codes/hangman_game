@@ -21,7 +21,11 @@ describe Guesses do
   end
 
   it "returns true if guess equals word" do
-    expect(subject.check_if_word_is_guessed("nutella", "nutella")).to eq(true)
+    expect(subject.check_if_word_is_guessed?("nutella", "nutella")).to eq(true)
+  end
+
+  it "returns false if guess equals word" do
+    expect(subject.check_if_word_is_guessed?("boo", "nutella")).to eq(false)
   end
 
   it "starts at 0" do
