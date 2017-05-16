@@ -19,16 +19,20 @@ def game_flow(word)
   until newest_word == word || guess_number == 6
     @display.display_lines(lines)
     @display.ask_for_letter
-    letter = @display.get_letter_input
-    guess_checker = guesses.check_guess(letter, word)
+    guess = @display.get_letter_input
+
+    if guesses.check_if_word_is_guessed?(guess, word)
+      @display.display_you_win
+      return "win"
+    end
+
+    guess_checker = guesses.check_guess(guess, word)
     if guess_checker
-      newest_word = word_places.substitute_letters(letter, lines, word)
+      newest_word = word_places.substitute_letters(guess, lines, word)
     else
-      body_parts = []
       guess_number += guesses.increment_guess(0)
       body_part = @display.draw_body_part(guess_number)
-      body_parts.push(body_part)
-      @display.display_body_part(body_parts)
+      @display.display_body_part(body_part)
     end
   end
   @display.display_lines(newest_word)
