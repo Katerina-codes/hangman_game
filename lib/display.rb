@@ -1,3 +1,5 @@
+require_relative 'guesses'
+
 class Display
   BODY_PARTS = {
     1 => "0",
@@ -22,7 +24,18 @@ class Display
   end
 
   def get_letter_input
-    @input.gets.chomp.downcase.to_s
+    guesses = Guesses.new
+
+    guess = @input.gets.chomp.downcase.to_s
+
+    if guess == "nutella"
+      guess
+    elsif guesses.check_input_is_valid(guess)
+      guess
+    else
+      ask_for_letter
+      get_letter_input
+    end
   end
 
   def draw_body_part(guess_number)
