@@ -14,8 +14,9 @@ def game_flow(word)
 
   guess_number = 0
   lines = word_places.spaces(word)
+  newest_word = []
 
-  until guess_number == 6
+  until newest_word == word || guess_number == 6
     @display.ask_for_letter
     letter = @display.get_letter_input
     guess_checker = guesses.check_guess(letter, word)
