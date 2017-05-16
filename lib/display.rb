@@ -25,12 +25,17 @@ class Display
     @input.gets.chomp.downcase
   end
 
+  def check_input_is_valid(guess)
+    "Please enter a letter\n"
+  end
+
   def draw_body_part(guess_number)
     BODY_PARTS[guess_number]
   end
 
-  def display_body_part(body_part)
-    @output.puts body_part
+  def display_body_part(a = "", b = "")
+    @output.puts "#{a}"
+    @output.print "#{b}"
   end
 
 end

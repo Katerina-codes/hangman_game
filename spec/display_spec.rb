@@ -21,6 +21,11 @@ describe Display do
     expect(display.get_letter_input).to eq("a")
   end
 
+  it "prompts again for a letter if input is a number" do
+    display = Display.new
+    expect(display.check_input_is_valid(0)).to eq("Please enter a letter\n")
+  end
+
   it "Draws first body part" do
     display = Display.new
     expect(display.draw_body_part(1)).to eq("0")
@@ -56,5 +61,11 @@ describe Display do
     display.display_body_part("0")
     expect(output.string).to eq("0\n")
   end
+
+  # it "displays a body part to user" do
+  #   display = Display.new(output)
+  #   display.display_body_part("0", "|")
+  #   expect(output.string).to eq("0\n|")
+  # end
 
 end
