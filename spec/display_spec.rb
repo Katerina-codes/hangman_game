@@ -26,6 +26,11 @@ describe Display do
     expect(display.check_input_is_valid(0)).to eq("Please enter a letter\n")
   end
 
+  it "prompts again for a letter if input is a punctuaton mark" do
+    display = Display.new
+    expect(display.check_input_is_valid("!")).to eq("Please enter a letter\n")
+  end
+
   it "Draws first body part" do
     display = Display.new
     expect(display.draw_body_part(1)).to eq("0")
