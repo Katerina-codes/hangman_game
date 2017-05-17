@@ -9,8 +9,7 @@ class Guesses
   end
 
   def check_input_is_valid?(guess)
-    alphabet = ("a".."z").to_a
-    alphabet = alphabet.join
+    alphabet = ("a".."z").to_a.join
     alphabet.include?(guess)
   end
 
