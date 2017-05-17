@@ -43,7 +43,7 @@ class Display
   end
 
   def display_body_part(a = "", b = "", c = "", d = "", e = "", f = "")
-    @output.puts "#{a}"
+    @output.puts " #{a}"
     @output.puts "#{c}" "#{b}" "#{d}"
     @output.print "#{f}" "#{e}"
   end
