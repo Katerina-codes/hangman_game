@@ -42,9 +42,9 @@ class Display
     BODY_PARTS[guess_number]
   end
 
-  def display_body_part(a = "", b = "", c = "")
+  def display_body_part(a = "", b = "", c = "", d = "")
     @output.puts "#{a}"
-    @output.print "#{c}" "#{b}"
+    @output.print "#{c}" "#{b}" "#{d}"
   end
 
   def display_you_win
