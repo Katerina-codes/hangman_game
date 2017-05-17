@@ -15,6 +15,7 @@ def game_flow(word)
   guess_number = 0
   lines = word_places.spaces(word)
   newest_word = []
+  parts = []
 
   until newest_word == word || guess_number == 6
     @display.display_lines(lines)
@@ -31,7 +32,8 @@ def game_flow(word)
     else
       guess_number += guesses.increment_guess(0)
       body_part = @display.draw_body_part(guess_number)
-      @display.display_body_part(body_part)
+      parts.push(body_part)
+      @display.display_body_part(parts)
     end
   end
   @display.display_lines(newest_word)
