@@ -88,4 +88,10 @@ describe Display do
     expect(output.string).to eq("0\n-|-\n\\")
   end
 
+  it "displays 6 body parts to user" do
+    display = Display.new(output)
+    display.display_body_part("0", "|", "-", "-", "\\", "/")
+    expect(output.string).to eq("0\n-|-\n/\\")
+  end
+
 end
