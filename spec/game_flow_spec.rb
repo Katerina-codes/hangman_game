@@ -19,4 +19,5 @@ describe GameFlow do
     game_flow.game_flow("tan")
     expect(output.string).to include("tan")
   end
+
 end
