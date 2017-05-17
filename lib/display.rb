@@ -45,7 +45,7 @@ class Display
   def display_body_part(a = "", b = "", c = "", d = "", e = "", f = "")
     @output.puts " #{a}"
     @output.puts "#{c}" "#{b}" "#{d}"
-    @output.print "#{f}" "#{e}"
+    @output.print "#{f}" " #{e}"
   end
 
   def display_you_win
