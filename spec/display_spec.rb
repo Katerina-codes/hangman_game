@@ -52,16 +52,16 @@ describe Display do
     expect(display.draw_body_part(6)).to eq("/")
   end
 
-  it "displays a body part to user" do
-    display = Display.new(output)
-    display.display_body_part("0")
-    expect(output.string).to eq("0\n")
-  end
-
   it "Returns 'You win!' if guess = word" do
     display = Display.new(output)
     display.display_you_win
     expect(output.string).to eq("You win! Woohoo!\n")
+  end
+
+  it "displays a body part to user" do
+    display = Display.new(output)
+    display.display_body_part("0")
+    expect(output.string).to eq("0\n")
   end
 
   # it "displays a body part to user" do
