@@ -23,11 +23,10 @@ def game_flow(word)
 
     if guesses.check_if_word_is_guessed?(guess, word)
       @display.display_you_win
-      return "win"
+      return
     end
 
-    guess_checker = guesses.check_guess(guess, word)
-    if guess_checker
+    if guesses.letter_is_present?(guess, word)
       newest_word = word_places.substitute_letters(guess, lines, word)
     else
       guess_number += guesses.increment_guess(0)
