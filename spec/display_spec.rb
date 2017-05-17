@@ -64,10 +64,17 @@ describe Display do
     expect(output.string).to eq("0\n")
   end
 
-  # it "displays a body part to user" do
-  #   display = Display.new(output)
-  #   display.display_body_part("0", "|")
-  #   expect(output.string).to eq("0\n|")
-  # end
+  it "displays head and upper body parts to user" do
+    display = Display.new(output)
+    display.display_body_part("0", "|")
+    expect(output.string).to eq("0\n|")
+  end
+
+  it "displays 3 body parts to user" do
+    display = Display.new(output)
+    display.display_body_part("0", "|", "-")
+    expect(output.string).to eq("0\n-|")
+  end
+
 
 end
