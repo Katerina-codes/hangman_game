@@ -34,8 +34,8 @@ def game_flow(word)
       @display.display_body_part(body_part)
     end
   end
-  @display.display_original_word(newest_word)
-  newest_word
+  @display.display_original_word(word)
+  word
 end
 
 end
