@@ -44,9 +44,10 @@ class Display
 
   def display_body_part(parts)
     head, chest, left_arm, right_arm, left_leg, right_leg = parts
-    @output.puts " #{head}"
-    @output.puts "#{left_arm}" "#{chest}" "#{right_arm}"
-    @output.puts "#{right_leg}" " #{left_leg}"
+    @output.puts "---"
+    @output.puts "|\\#{head}"
+    @output.puts "|#{left_arm}" "#{chest}" "#{right_arm}"
+    @output.puts "|#{right_leg}" " #{left_leg}"
   end
 
   def display_you_win

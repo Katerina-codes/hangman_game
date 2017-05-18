@@ -90,9 +90,10 @@ describe Display do
 
   it "displays 6 body parts to user" do
     display = Display.new(output)
-    full_body = """ 0
--|-
-/ \\
+    full_body = """---
+|\\0
+|-|-
+|/ \\
 """
     display.display_body_part(["0", "|", "-", "-", "\\", "/"])
     expect(output.string).to eq(full_body)
