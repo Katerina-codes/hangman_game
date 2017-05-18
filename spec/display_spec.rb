@@ -61,13 +61,42 @@ describe Display do
   it "displays a body part to user" do
     display = Display.new(output)
     display.display_body_part("0")
-    expect(output.string).to eq("0\n")
+    expect(output.string).to include("0")
   end
 
-  # it "displays a body part to user" do
-  #   display = Display.new(output)
-  #   display.display_body_part("0", "|")
-  #   expect(output.string).to eq("0\n|")
-  # end
+  it "displays head and upper body parts to user" do
+    display = Display.new(output)
+    display.display_body_part(["0", "|"])
+    expect(output.string).to include("0", "|")
+  end
+
+  it "displays 3 body parts to user" do
+    display = Display.new(output)
+    display.display_body_part(["0", "|", "-"])
+    expect(output.string).to include("0", "|", "-")
+  end
+
+  it "displays 4 body parts to user" do
+    display = Display.new(output)
+    display.display_body_part(["0", "|", "-", "-"])
+    expect(output.string).to include("0", "-", "|", "-")
+  end
+
+  it "displays 5 body parts to user" do
+    display = Display.new(output)
+    display.display_body_part(["0", "|", "-", "-", "\\"])
+    expect(output.string).to include("0", "-", "|", "-", "\\")
+  end
+
+  it "displays 6 body parts to user" do
+    display = Display.new(output)
+    full_body = """---
+|\\0
+|-|-
+|/ \\
+"""
+    display.display_body_part(["0", "|", "-", "-", "\\", "/"])
+    expect(output.string).to eq(full_body)
+  end
 
 end
