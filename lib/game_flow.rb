@@ -30,7 +30,7 @@ def game_flow(word)
     if guesses.letter_is_present?(guess, word)
       newest_word = word_places.substitute_letters(guess, lines, word)
     else
-      guess_number += guesses.increment_guess(0)
+      guess_number += 1 
       body_part = @display.draw_body_part(guess_number)
       parts.push(body_part)
       @display.display_body_part(parts)

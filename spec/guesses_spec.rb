@@ -28,16 +28,4 @@ describe Guesses do
     expect(subject.check_if_word_is_guessed?("boo", "nutella")).to eq(false)
   end
 
-  it "Returns 1 if guess number is 0" do
-    expect(subject.increment_guess(0)).to eq(1)
-  end
-
-  it "Returns 2 if guess number is 1" do
-    expect(subject.increment_guess(1)).to eq(2)
-  end
-
-  it "Returns 3 if guess number is 2" do
-    expect(subject.increment_guess(2)).to eq(3)
-  end
-
 end

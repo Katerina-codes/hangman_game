@@ -21,7 +21,6 @@ describe Display do
     expect(display.get_letter_input).to eq("a")
   end
 
-
   it "Draws first body part" do
     display = Display.new
     expect(display.draw_body_part(1)).to eq("0")
