@@ -54,7 +54,6 @@ class Display
   def display_original_word(word)
     word = word.delete(" ")
     @output.puts word
-    word
   end
 
 end
