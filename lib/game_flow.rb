@@ -14,7 +14,7 @@ def game_flow(word)
 
   guess_number = 0
   lines = word_places.spaces(word)
-  newest_word = []
+  newest_word = ""
   parts = []
 
   until newest_word == word || guess_number == 6
