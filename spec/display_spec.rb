@@ -64,12 +64,6 @@ describe Display do
     expect(output.string).to eq("0\n")
   end
 
-  it "displays the original word" do
-    display = Display.new(output)
-    display.display_original_word("n u t e l l a")
-    expect(output.string).to eq("nutella\n")
-  end
-
   # it "displays a body part to user" do
   #   display = Display.new(output)
   #   display.display_body_part("0", "|")
