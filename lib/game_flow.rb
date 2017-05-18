@@ -35,7 +35,6 @@ def game_flow(word)
     end
   end
   @display.display_original_word(word)
-  # word
 end
 
 end
