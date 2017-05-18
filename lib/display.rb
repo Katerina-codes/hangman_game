@@ -51,9 +51,10 @@ class Display
     @output.puts "You win! Woohoo!"
   end
 
-  def display_word(actual_word)
-    actual_word = actual_word.delete(" ")
-    @output.puts actual_word
+  def display_original_word(word)
+    word = word.delete(" ")
+    @output.puts word
+    word
   end
 
 end

@@ -17,6 +17,6 @@ describe GameFlow do
     display = Display.new(output, input)
     game_flow = GameFlow.new(display)
     game_flow.game_flow("tan")
-    expect(output.string).to include("t a n")
+    expect(output.string).to include("tan")
   end
 end
