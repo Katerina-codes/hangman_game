@@ -99,4 +99,10 @@ describe Display do
     expect(output.string).to eq(full_body)
   end
 
+  it "displays the original word" do
+    display = Display.new(output)
+    display.display_original_word("n u t e l l a")
+    expect(output.string).to eq("nutella\n")
+  end
+
 end
