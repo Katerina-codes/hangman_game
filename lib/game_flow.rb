@@ -24,13 +24,11 @@ def game_flow(word)
 
     if guesses.check_if_word_is_guessed?(guess, word)
       @display.display_you_win
-      return
-    end
-
-    if guesses.letter_is_present?(guess, word)
+      newest_word = word
+    elsif guesses.letter_is_present?(guess, word)
       newest_word = word_places.substitute_letters(guess, lines, word)
     else
-      guess_number += 1 
+      guess_number += 1
       body_part = @display.draw_body_part(guess_number)
       parts.push(body_part)
       @display.display_body_part(parts)

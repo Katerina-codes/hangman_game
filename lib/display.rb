@@ -28,9 +28,7 @@ class Display
 
     guess = @input.gets.chomp.downcase.to_s
 
-    if guess == "nutella"
-      guess
-    elsif guesses.check_input_is_valid?(guess)
+    if guesses.check_input_is_valid?(guess)
       guess
     else
       ask_for_letter
