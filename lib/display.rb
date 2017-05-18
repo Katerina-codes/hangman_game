@@ -16,7 +16,7 @@ class Display
   end
 
   def display_lines(letter_places)
-    @output.puts "Word = " + letter_places.to_s
+    @output.puts "Word = " + letter_places.split("").join(" ")
   end
 
   def ask_for_letter
