@@ -16,7 +16,7 @@ class Display
   end
 
   def display_lines(letter_places)
-    @output.puts "Word = " + letter_places.split("").join(" ")
+    @output.puts "Word = " + letter_places.to_s
   end
 
   def ask_for_letter
@@ -49,11 +49,6 @@ class Display
 
   def display_you_win
     @output.puts "You win! Woohoo!"
-  end
-
-  def display_original_word(word)
-    word = word.delete(" ")
-    @output.puts word
   end
 
 end
