@@ -20,7 +20,6 @@ def game_flow(word)
     @display.display_lines(lines)
     @display.ask_for_letter
     guess = @display.get_letter_input
-
     if @guesses.check_if_word_is_guessed?(guess, word)
       @display.display_you_win
       newest_word = word
