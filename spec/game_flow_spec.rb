@@ -22,4 +22,13 @@ describe GameFlow do
     expect(output.string).to include("tan")
   end
 
+  it "Test that body parts are printed guess is invalid" do
+    input = StringIO.new("z\nz\nz\nz\nz\nz\n")
+    output = StringIO.new
+    display = Display.new(output,input)
+    game_flow = GameFlow.new(display, guesses, word_places)
+    game_flow.game_flow("n")
+    expect(output.string).to include("---\n|\\0\n|-|-\n|/ \\\nn\n")
+  end
+
 end
