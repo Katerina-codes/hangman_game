@@ -4,7 +4,7 @@ require_relative 'word_places'
 require_relative 'display'
 require_relative 'guesses'
 
-def initialize(display = Display.new, guesses = Guesses.new, word_places = WordPlaces.new)
+def initialize(display, guesses, word_places)
   @display = display
   @guesses = guesses
   @word_places = word_places

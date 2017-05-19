@@ -2,7 +2,7 @@ require 'word_places'
 
 describe WordPlaces do
 
-  subject(:word_places) { described_class.new }
+  subject { described_class.new }
 
   it "returns one line for one character" do
     expect(subject.spaces("a")).to eq("_")
