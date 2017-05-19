@@ -10,9 +10,10 @@ class Display
     6 => "/"
   }
 
-  def initialize(output = $stdout, input = $stdin)
+  def initialize(output = $stdout, input = $stdin, guesses = Guesses.new)
     @output = output
     @input = input
+    @guesses = guesses
   end
 
   def display_lines(letter_places)
@@ -24,11 +25,10 @@ class Display
   end
 
   def get_letter_input
-    guesses = Guesses.new
 
     guess = @input.gets.chomp.downcase.to_s
 
-    if guesses.check_input_is_valid?(guess)
+    if @guesses.check_input_is_valid?(guess)
       guess
     else
       ask_for_letter
