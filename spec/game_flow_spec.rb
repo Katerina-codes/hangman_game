@@ -4,7 +4,7 @@ describe GameFlow do
   let(:guesses) { Guesses.new }
   let(:word_places) { WordPlaces.new }
 
-  it "returns 'please enter a letter' until 6 guesses are up or word is guessed" do
+  it "returns 'please enter a letter' if letter was not in word" do
     input = StringIO.new("z\nz\nz\nz\nz\nz\nz")
     output = StringIO.new
     display = Display.new(output, input)
