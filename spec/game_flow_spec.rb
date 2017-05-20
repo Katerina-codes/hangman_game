@@ -31,13 +31,13 @@ describe GameFlow do
     expect(output.string).to include("0")
   end
 
-  it "Tests that body parts are printed guess is invalid" do
+  it "Tests that body parts are printed when guess is invalid" do
     input = StringIO.new("z\nz\nz\nz\nz\nz\n")
     output = StringIO.new
     display = Display.new(output,input)
     game_flow = GameFlow.new(display, guesses, word_places)
     game_flow.game_flow("n")
-    expect(output.string).to include("---\n|\\0\n|-|-\n|/ \\\nn\n")
+    expect(output.string).to include("---", "|", "\\", "0", "|", "-", "|", "-", "|", "/", "\\")
   end
 
   it "Tests you can guess a word in one go" do
