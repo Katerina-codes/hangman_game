@@ -20,9 +20,12 @@ def game_flow(word)
     @display.display_lines(lines)
     @display.ask_for_letter
     guess = @display.get_letter_input
+
     if @guesses.check_if_word_is_guessed?(guess, word)
       @display.display_you_win
       newest_word = word
+    elsif !@guesses.check_input_is_valid?(guess)
+        @display.ask_for_letter
     elsif @guesses.letter_is_present?(guess, word)
       newest_word = @word_places.substitute_letters(guess, lines, word)
     else

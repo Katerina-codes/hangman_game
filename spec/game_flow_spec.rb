@@ -31,4 +31,13 @@ describe GameFlow do
     expect(output.string).to include("---\n|\\0\n|-|-\n|/ \\\nn\n")
   end
 
+  it "Tests you can guess a word in one go" do
+    input = StringIO.new("jam\n")
+    output = StringIO.new
+    display = Display.new(output,input)
+    game_flow = GameFlow.new(display, guesses, word_places)
+    game_flow.game_flow("jam")
+    expect(output.string).to include("You win! Woohoo!")
+  end
+
 end
