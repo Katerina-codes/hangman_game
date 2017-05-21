@@ -49,4 +49,8 @@ class Display
     @output.puts word
   end
 
+  def display_wrong_letters(guesses)
+    @output.puts "Wrong guesses: " + guesses
+  end
+
 end
