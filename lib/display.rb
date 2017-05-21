@@ -50,7 +50,7 @@ class Display
   end
 
   def display_wrong_letters(guesses)
-    @output.puts "Wrong guesses: " + guesses
+    @output.puts "Wrong guesses: " + guesses.join(", ")
   end
 
 end

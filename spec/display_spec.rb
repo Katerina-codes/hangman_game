@@ -102,7 +102,7 @@ describe Display do
 
   it "displays a list of wrongly guessed letters" do
     display = Display.new(output)
-    display.display_wrong_letters("z")
+    display.display_wrong_letters(["z"])
     expect(output.string).to eq("Wrong guesses: z\n")
   end
 
