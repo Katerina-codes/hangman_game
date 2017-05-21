@@ -25,15 +25,7 @@ class Display
   end
 
   def get_letter_input
-
-    guess = @input.gets.chomp.downcase.to_s
-
-    if @guesses.check_input_is_valid?(guess)
-      guess
-    else
-      ask_for_letter
-      get_letter_input
-    end
+    @input.gets.chomp.downcase.to_s
   end
 
   def draw_body_part(guess_number)

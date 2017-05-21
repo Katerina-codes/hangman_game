@@ -6,7 +6,7 @@ class Guesses
 
   def check_input_is_valid?(guess)
     alphabet = ("a".."z").to_a.join
-    alphabet.include?(guess) || guess == "nutella"
+    alphabet.include?(guess)
   end
 
   def check_if_word_is_guessed?(guess, word)
