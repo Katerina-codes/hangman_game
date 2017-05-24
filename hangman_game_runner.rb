@@ -5,4 +5,5 @@ require_relative 'lib/game_flow'
 
 game_flow = GameFlow.new(Display.new, Guesses.new, WordPlaces.new)
 
-game_flow.game_flow("nutella")
+words = File.open("words.txt", "r").gets.chomp  
+game_flow.game_flow(words)
