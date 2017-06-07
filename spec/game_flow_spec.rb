@@ -16,36 +16,32 @@ describe GameFlow do
 
   it "guesses the correct word" do
     input = StringIO.new("t\na\nn")
-    game_flow = new_game_instance(Display.new(output, input))
 
-    game_flow.game_flow("tan")
+    new_game_instance(Display.new(output, input)).game_flow("tan")
 
     expect(output.string).to include("tan")
   end
 
   it "tests that one body part is printed when guess in invalid" do
     input = StringIO.new("z\nnutella")
-    game_flow = new_game_instance(Display.new(output, input))
 
-    game_flow.game_flow("nutella")
+    new_game_instance(Display.new(output, input)).game_flow("nutella")
 
     expect(output.string).to include("0")
   end
 
   it "Tests that body parts are printed when guess is invalid" do
     input = StringIO.new("z\nz\nz\nz\nz\nz\n")
-    game_flow = new_game_instance(Display.new(output, input))
 
-    game_flow.game_flow("n")
+    new_game_instance(Display.new(output, input)).game_flow("n")
 
     expect(output.string).to include("---", "|", "\\", "0", "|", "-", "|", "-", "|", "/", "\\")
   end
 
   it "Tests you can guess a word in one go" do
     input = StringIO.new("jam\n")
-    game_flow = new_game_instance(Display.new(output, input))
 
-    game_flow.game_flow("jam")
+    new_game_instance(Display.new(output, input)).game_flow("jam")
 
     expect(output.string).to include("You win! Woohoo!")
   end
