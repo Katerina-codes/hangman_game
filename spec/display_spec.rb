@@ -4,7 +4,6 @@ describe Display do
   subject {described_class.new}
   let(:output) { StringIO.new }
 
-
   it "displays characters to the user" do
     display = display_with(output)
     display.display_lines("_")
